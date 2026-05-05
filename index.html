@@ -45,13 +45,31 @@
 
   <div class="menu-content">
 
-    <a href="#home" onclick="goHome()">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="projects.html">Projects</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
+  <a href="#home" onclick="goHome()">
+    <i class="fas fa-home"></i> Home
+  </a>
 
+  <a href="about.html">
+    <i class="fas fa-user"></i> About
+  </a>
+
+  <a href="services.html">
+    <i class="fas fa-cogs"></i> Services
+  </a>
+
+  <a href="projects.html">
+    <i class="fas fa-briefcase"></i> Projects
+  </a>
+
+  <a href="blog.html">
+    <i class="fas fa-blog"></i> Blog
+  </a>
+
+  <a href="contact.html">
+    <i class="fas fa-envelope"></i> Contact
+  </a>
+
+</div>
     <div class="menu-buttons">
       <button onclick="go404()">Sign Up</button>
       <button onclick="go404()">Login</button>
@@ -63,22 +81,34 @@
 
 <!-- HERO -->
 <section class="hero" id="home">
+  
 
-  <div class="hero-content">
-    <h4>STACKLY IT SOLUTIONS</h4>
-    <h1>BUILD <span>SMART SYSTEMS</span></h1>
-    <p>Enterprise-grade digital transformation solutions.</p>
-    <button onclick="go404()" class="btn">Get Started</button>
+  <!-- BACKGROUND SLIDER -->
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" class="active">
+    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
   </div>
 
-  <div class="hero-images">
-    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692" class="img1">
-    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" class="img2">
-    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" class="img3">
-    <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" class="img4">
+  <!-- OVERLAY -->
+  <div class="overlay"></div>
+
+  <!-- CONTENT -->
+  <div class="hero-content">
+    <p class="tag">Fast & Reliable IT Solution</p>
+
+    <h1>Next IT Solution <br> for Futures.</h1>
+
+    <p class="desc">
+      Comprehensive IT support, monitoring & digital solutions
+      for modern businesses.
+    </p>
+
+    <button class="btn" onclick="go404()">Explore More →</button>
   </div>
 
 </section>
+  
 
 <!-- MOVING IMAGES -->
 <section class="slider">
@@ -88,42 +118,131 @@
     <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
     <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
   </div>
+
+<div class="hero-extra">
+
+  <!-- MOVING TEXT -->
+  <div class="moving-content">
+    <p>🚀 Cloud • AI • Cybersecurity • Automation • DevOps • Data Science</p>
+  </div>
+
+  <!-- MOVING IMAGE -->
+  <div class="moving-image">
+    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692" alt="tech">
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" class="img2">
+   
+  <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" class="side-img">
+  </div>
+
+</div>
+
+<section class="steps">
+
+  <p class="tag">How We Work</p>
+
+  <h2>
+    Driving Digital Growth Through <br> Smart Execution
+  </h2>
+
+  <!-- STEP 1 -->
+  <div class="step">
+    <div class="step-number">01</div>
+    <div class="step-card reveal">
+      <h3>Strategic Analysis & Consultation</h3>
+      <p>
+        We begin by understanding your business ecosystem, identifying key challenges,
+        and aligning technology solutions with your long-term objectives. Our goal is
+        to create a clear and actionable roadmap for success.
+      </p>
+    </div>
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="step">
+    <div class="step-number">02</div>
+    <div class="step-card reveal">
+      <h3>Solution Design & Development</h3>
+      <p>
+        Our team architects and develops tailored solutions using modern technologies,
+        ensuring scalability, performance, and security at every stage of the process.
+      </p>
+    </div>
+  </div>
+
+  <!-- STEP 3 -->
+  <div class="step">
+    <div class="step-number">03</div>
+    <div class="step-card reveal">
+      <h3>Deployment & Continuous Optimization</h3>
+      <p>
+        We seamlessly deploy solutions and continuously monitor performance,
+        optimizing systems to ensure efficiency, reliability, and long-term growth.
+      </p>
+    </div>
+  </div>
+
+</section>
+
+
+
+
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <div class="footer-grid">
+<footer class="footer">
 
-    <div>
-      <h3>Services</h3>
-      <p>Cloud Solutions</p>
-      <p>Cyber Security</p>
-      <p>Web Development</p>
+  <div class="footer-container">
+
+    <!-- LINKS -->
+    <div class="footer-col">
+      <h3>Company</h3>
+      <p>Privacy Policy</p>
+      <p>Recognitions</p>
+      <p>Careers <span class="new">NEW</span></p>
+      <p>News</p>
+      <p>Feedback</p>
     </div>
 
-    <div>
+    <!-- SERVICES -->
+     <div class="footer-col">
+  <h3>Services</h3>
+
+  <a href="404.html">Manage IT Service</a>
+  <a href="404.html">Cloud Computing</a>
+  <a href="404.html">Cyber Security</a>
+  <a href="404.html">Software Develop</a>
+  <a href="404.html">IT Consulting</a>
+</div>
+
+    <!-- OFFICE -->
+    <div class="footer-col">
       <h3>Office Hours</h3>
       <p>Mon - Fri : 9AM - 6PM</p>
       <p>Sat : 7AM - 9PM</p>
-      <p>Sunday : Closed</p>
+      <p>Sunday <span class="close">Closed</span></p>
     </div>
 
-    <div>
+    <!-- CONTACT -->
+    <div class="footer-col">
       <h3>Contact</h3>
       <p>info@stackly.com</p>
       <p>+91 98765 43210</p>
-    </div>
 
-    <div>
-      <h3>Follow</h3>
-      <i class="fab fa-facebook" onclick="go404()"></i>
-      <i class="fab fa-linkedin" onclick="go404()"></i>
-      <i class="fab fa-instagram" onclick="go404()"></i>
+      <div class="social">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-x-twitter"></i>
+        <i class="fab fa-linkedin-in"></i>
+      </div>
     </div>
 
   </div>
 
-  <p class="copy">© 2026 Stackly</p>
+  <div class="footer-bottom">
+    <p>stackly © 2026. All right reserved.</p>
+    <p>Privacy & Policy • Terms & Condition</p>
+  </div>
+
 </footer>
 
 <script src="script.js"></script>

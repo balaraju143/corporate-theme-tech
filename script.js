@@ -39,26 +39,27 @@ function go404(){
 }
 
 // FORCE 404
-document.querySelectorAll("a").forEach(link=>{
+document.querySelectorAll("a").forEach(link => {
   const href = link.getAttribute("href");
 
   // ✅ Allow HOME links (logo + home menu)
-  if(
-    href === "index.html" ||
-    href === "/" ||
-    href === "#home"
-  ){
+  if (
+    href === "#" ||
+    href === "#home" ||
+    href.includes("index.html")
+  ) {
     return; // allow normal behavior
   }
 
-  // ❌ Redirect all other links to 404
-  if(href && !href.startsWith("#")){
-    link.addEventListener("click",(e)=>{
+  // ❌ Redirect others to 404
+  if (href && !href.startsWith("#")) {
+    link.addEventListener("click", (e) => {
       e.preventDefault();
       window.location.href = "404.html";
     });
   }
 });
+
 
 
 document.querySelector(".logo a").addEventListener("click", function(e){
@@ -73,3 +74,33 @@ document.querySelector(".logo a").addEventListener("click", function(e){
   }
 
 });
+
+function scrollToTop(){
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+
+
+function revealOnScroll(){
+  const elements = document.querySelectorAll(".reveal");
+
+  elements.forEach(el => {
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
+
+    if(elementTop < windowHeight - 100){
+      el.classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+
+let bgImages = document.querySelectorAll(".hero-bg img");
+let i = 0;
+
+setInterval(()=>{
+  bgImages[i].classList.remove("active");
+  i = (i + 1) % bgImages.length;
+  bgImages[i].classList.add("active");
+},4000);
