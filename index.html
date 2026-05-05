@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stackly</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-center">
+    
+    <img src="images/logo (1).webp" class="loader-logo">
+
+    <div class="loader-ring"></div>
+    <p>Loading Experience...</p>
+
+  </div>
+</div>
+<!-- HEADER -->
+<header>
+  <div class="logo">
+  <a href="index.html">
+    <img src="images/logo (1).webp" alt="Stackly">
+  </a>
+</div>
+
+  <div class="menu-btn" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+</header>
+
+<!-- OVERLAY -->
+<div id="overlay" onclick="closeMenu()"></div>
+
+<!-- SIDE MENU -->
+<div id="overlay" onclick="closeMenu()"></div>
+
+<div id="sideMenu">
+
+  <div class="menu-content">
+
+    <a href="#home" onclick="goHome()">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="projects.html">Projects</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+
+    <div class="menu-buttons">
+      <button onclick="go404()">Sign Up</button>
+      <button onclick="go404()">Login</button>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+  <div class="hero-content">
+    <h4>STACKLY IT SOLUTIONS</h4>
+    <h1>BUILD <span>SMART SYSTEMS</span></h1>
+    <p>Enterprise-grade digital transformation solutions.</p>
+    <button onclick="go404()" class="btn">Get Started</button>
+  </div>
+
+  <div class="hero-images">
+    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692" class="img1">
+    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" class="img2">
+    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" class="img3">
+    <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" class="img4">
+  </div>
+
+</section>
+
+<!-- MOVING IMAGES -->
+<section class="slider">
+  <div class="slide-track">
+    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
+    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
+    <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+
+    <div>
+      <h3>Services</h3>
+      <p>Cloud Solutions</p>
+      <p>Cyber Security</p>
+      <p>Web Development</p>
+    </div>
+
+    <div>
+      <h3>Office Hours</h3>
+      <p>Mon - Fri : 9AM - 6PM</p>
+      <p>Sat : 7AM - 9PM</p>
+      <p>Sunday : Closed</p>
+    </div>
+
+    <div>
+      <h3>Contact</h3>
+      <p>info@stackly.com</p>
+      <p>+91 98765 43210</p>
+    </div>
+
+    <div>
+      <h3>Follow</h3>
+      <i class="fab fa-facebook" onclick="go404()"></i>
+      <i class="fab fa-linkedin" onclick="go404()"></i>
+      <i class="fab fa-instagram" onclick="go404()"></i>
+    </div>
+
+  </div>
+
+  <p class="copy">© 2026 Stackly</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
