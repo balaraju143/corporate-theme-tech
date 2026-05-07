@@ -1,8 +1,18 @@
-// LOADER
+
+//Loader
 window.onload = ()=>{
+
+  const loader = document.getElementById("loader");
+
   setTimeout(()=>{
-    document.getElementById("loader").style.display="none";
-  },3000);
+    loader.style.opacity = "0";
+
+    setTimeout(()=>{
+      loader.style.display = "none";
+    },400);
+
+  },2000);
+
 };
 
 // MENU
@@ -39,66 +49,62 @@ function go404(){
 }
 
 // FORCE 404
-document.addEventListener("DOMContentLoaded", () => {
+document.querySelectorAll("a").forEach(link => {
 
-  document.querySelectorAll("a").forEach(link => {
-    const href = link.getAttribute("href");
+  const href = link.getAttribute("href");
 
-    // ✅ allow HOME links (logo + home menu)
-    if (
-      link.closest(".logo") ||   // 🔥 very important (logo fix)
-      href === "#" ||
-      href === "#home" ||
-      (href && href.includes("index.html"))
-    ) {
-      return;
-    }
+  // allow home links
+  if(
+    href === "#" ||
+    href === "#home" ||
+    href === "index.html"
+  ){
+    return;
+  }
 
-    // ❌ redirect all other links to 404
-    if (href && !href.startsWith("#")) {
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        window.location.href = "404.html";
-      });
-    }
-  });
-
-});
-
-
-document.querySelector(".logo a").addEventListener("click", function(e){
-
-  if(window.location.pathname.includes("index.html") || window.location.pathname === "/"){
-    e.preventDefault();
-
-    window.scrollTo({
-      top:0,
-      behavior:"smooth"
+  // redirect others
+  if(href && !href.startsWith("#")){
+    link.addEventListener("click", (e)=>{
+      e.preventDefault();
+      window.location.href = "404.html";
     });
   }
 
 });
 
+
 function scrollToTop(){
   window.scrollTo({top:0,behavior:"smooth"});
 }
 
+function revealCards(){
 
+  const cards = document.querySelectorAll(".work-item");
 
-function revealOnScroll(){
-  const elements = document.querySelectorAll(".reveal");
+  cards.forEach(card=>{
 
-  elements.forEach(el => {
-    const windowHeight = window.innerHeight;
-    const elementTop = el.getBoundingClientRect().top;
+    const top = card.getBoundingClientRect().top;
 
-    if(elementTop < windowHeight - 100){
-      el.classList.add("active");
+    if(top < window.innerHeight - 100){
+
+      card.classList.add("active");
+
+    } else {
+
+      card.classList.remove("active");
+
     }
+
   });
+
 }
 
-window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("scroll", revealCards);
+
+revealCards();
+
+
+
 
 let bgImages = document.querySelectorAll(".hero-bg img");
 let i = 0;
@@ -109,39 +115,152 @@ setInterval(()=>{
   bgImages[i].classList.add("active");
 },4000);
 
+    // SHOW
+    if(rect.top < windowHeight - 120 && rect.bottom > 100){
 
-function revealSmooth(){
-  const elements = document.querySelectorAll(
-    ".reveal-up, .reveal-left, .reveal-right"
-  );
-
-  elements.forEach(el=>{
-    const top = el.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
-
-    if(top < windowHeight - 100){
       el.classList.add("active");
+
     }
-  });
-}
+
+    // HIDE
+    else{
+
+      el.classList.remove("active");
+
+    }
+
+  
+
+
 
 window.addEventListener("scroll", revealSmooth);
 
-function exploreAnimation(){
-  const el = document.querySelector(".explore-animate");
-  if(!el) return;
+revealSmooth();
 
-  const rect = el.getBoundingClientRect();
-  const windowHeight = window.innerHeight;
 
-  // SHOW when visible
-  if(rect.top < windowHeight - 100 && rect.bottom > 100){
-    el.classList.add("active");
-  } 
-  // HIDE when scroll up/out
-  else{
-    el.classList.remove("active");
-  }
+function goHomeLoader(){
+
+  // close menu
+  closeMenu();
+
+  // show loader
+  const loader = document.getElementById("loader");
+
+  loader.style.display = "flex";
+  loader.style.opacity = "1";
+  loader.style.visibility = "visible";
+
+  // redirect after delay
+  setTimeout(()=>{
+    window.location.href = "index.html";
+  },2000);
+
 }
 
-window.addEventListener("scroll", exploreAnimation);
+
+/* ===== PREMIUM SECTION ANIMATION ===== */
+
+function premiumReveal(){
+
+  const elements = document.querySelectorAll(
+    ".reveal-up, .reveal-right"
+  );
+
+  elements.forEach(el=>{
+
+    const top = el.getBoundingClientRect().top;
+
+    if(top < window.innerHeight - 100){
+
+      el.classList.add("active");
+
+    }else{
+
+      el.classList.remove("active");
+
+    }
+
+  });
+
+}
+
+window.addEventListener("scroll", premiumReveal);
+
+premiumReveal();
+
+
+function changeService(tab,title,desc,image){
+
+  // REMOVE ACTIVE TAB
+  document.querySelectorAll(".tab").forEach(t=>{
+    t.classList.remove("active-tab");
+  });
+
+  // ADD ACTIVE TAB
+  tab.classList.add("active-tab");
+
+  // CHANGE CONTENT
+  document.getElementById("serviceTitle").innerHTML = title;
+
+  document.getElementById("serviceDesc").innerHTML = desc;
+
+  document.getElementById("serviceImage").src = image;
+
+  // SMOOTH ANIMATION
+  const card = document.querySelector(".premium-card");
+
+  card.style.opacity = "0";
+
+  card.style.transform = "translateY(20px)";
+
+  setTimeout(()=>{
+
+    card.style.opacity = "1";
+
+    card.style.transform = "translateY(0)";
+
+  },200);
+
+}
+
+
+
+
+
+/* ===== SERVICE TABS ===== */
+
+function changeService(tab,title,desc,image){
+
+  // ACTIVE TAB
+  document.querySelectorAll(".service-tab").forEach(btn=>{
+    btn.classList.remove("active");
+  });
+
+  tab.classList.add("active");
+
+  // CARD
+  const card = document.querySelector(".service-display");
+
+  card.style.opacity = "0";
+
+  card.style.transform = "translateY(20px)";
+
+  setTimeout(()=>{
+
+    document.getElementById("serviceTitle").innerHTML = title;
+
+    document.getElementById("serviceDesc").innerHTML = desc;
+
+    document.getElementById("serviceImage").src = image;
+
+    card.style.opacity = "1";
+
+    card.style.transform = "translateY(0)";
+
+  },200);
+
+}
+
+
+
+

@@ -1,304 +1,605 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stackly</title>
 
-<link rel="stylesheet" href="style.css">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Stackly</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    rel="stylesheet"
+  />
 </head>
 
 <body>
 
-<!-- LOADER -->
-<div id="loader">
-  <div class="loader-center">
-    
-    <img src="images/logo (1).webp" class="loader-logo">
+  <!-- LOADER -->
+  <div id="loader">
 
-    <div class="loader-ring"></div>
-    <p>Loading Experience...</p>
+    <div class="loader-center">
 
-  </div>
-</div>
-<!-- HEADER -->
-<header>
-  <div class="logo">
-  <a href="index.html">
-    <img src="images/logo (1).webp" alt="Stackly">
-  </a>
-</div>
+      <img src="images/logo (1).webp" class="loader-logo" />
 
-  <div class="menu-btn" onclick="toggleMenu()">
-    <i class="fas fa-bars"></i>
-  </div>
-</header>
+      <div class="loader-ring"></div>
 
-<!-- OVERLAY -->
-<div id="overlay" onclick="closeMenu()"></div>
+      <p>Loading Experience...</p>
 
-<!-- SIDE MENU -->
-<div id="overlay" onclick="closeMenu()"></div>
-
-<div id="sideMenu">
-
-  <div class="menu-content">
-
-  <a href="#home" onclick="goHome()">
-    <i class="fas fa-home"></i> Home
-  </a>
-
-  <a href="about.html">
-    <i class="fas fa-user"></i> About
-  </a>
-
-  <a href="services.html">
-    <i class="fas fa-cogs"></i> Services
-  </a>
-
-  <a href="projects.html">
-    <i class="fas fa-briefcase"></i> Projects
-  </a>
-
-  <a href="blog.html">
-    <i class="fas fa-blog"></i> Blog
-  </a>
-
-  <a href="contact.html">
-    <i class="fas fa-envelope"></i> Contact
-  </a>
- <div class="menu-buttons">
-      <button onclick="go404()">Sign Up</button>
-      <button onclick="go404()">Login</button>
     </div>
 
-
-
-
-
-</div>
-   
   </div>
 
-</div>
+  <!-- HEADER -->
+  <header>
 
-<!-- HERO -->
-<section class="hero" id="home">
-  
+    <!-- LOGO -->
+    <div class="logo" onclick="goHomeLoader()">
+      <img src="images/logo (1).webp" alt="Stackly" />
+    </div>
 
-  <!-- BACKGROUND SLIDER -->
-  <div class="hero-bg">
-    <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" class="active">
-    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
-    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
-  </div>
+    <!-- DESKTOP MENU -->
+    <nav class="desktop-menu">
+
+      <a href="#home">Home</a>
+
+      <a href="about.html">About</a>
+
+      <a href="services.html">Services</a>
+
+      <a href="projects.html">Projects</a>
+
+      <a href="contact.html">Contact</a>
+
+      <button class="login-btn" onclick="go404()">
+        Login
+      </button>
+
+    </nav>
+
+    <!-- MOBILE MENU BUTTON -->
+    <div class="menu-btn" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+
+  </header>
 
   <!-- OVERLAY -->
-  <div class="overlay"></div>
+  <div id="overlay" onclick="closeMenu()"></div>
 
-  <!-- CONTENT -->
-  <div class="hero-content">
-    <p class="tag">Fast & Reliable IT Solution</p>
+  <!-- MOBILE SIDE MENU -->
+  <div id="sideMenu">
 
-    <h1>Next IT Solution <br> for Futures.</h1>
+    <div class="menu-content">
 
-    <p class="desc">
-      Comprehensive IT support, monitoring & digital solutions
-      for modern businesses.
+      <a href="#home">
+        <i class="fas fa-house"></i>
+        Home
+      </a>
+
+      <a href="about.html">
+        <i class="fas fa-user"></i>
+        About
+      </a>
+
+      <a href="services.html">
+        <i class="fas fa-briefcase"></i>
+        Services
+      </a>
+
+      <a href="projects.html">
+        <i class="fas fa-layer-group"></i>
+        Projects
+      </a>
+
+      <a href="contact.html">
+        <i class="fas fa-envelope"></i>
+        Contact
+      </a>
+
+    </div>
+
+    <div class="menu-buttons">
+
+      <button onclick="go404()">
+        Login
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+
+    <!-- BACKGROUND IMAGES -->
+    <div class="hero-bg">
+
+      <img
+        src="images/backround img1.webp"
+        class="active"
+      />
+
+      <img
+        src="images/background img2.webp"
+      />
+
+      <img
+        src="images/background img3.webp"
+      />
+
+    </div>
+
+    <!-- OVERLAY -->
+    <div class="overlay"></div>
+
+    <!-- HERO CONTENT -->
+    <div class="hero-content">
+
+      <p class="tag">
+        Enterprise Technology Solutions
+      </p>
+
+      <h1>
+        Transforming Businesses Through Smart Digital Innovation
+      </h1>
+
+      <p class="desc">
+        Stackly delivers scalable cloud infrastructure,
+        intelligent automation, and secure enterprise
+        solutions designed for modern businesses.
+      </p>
+
+      <button class="btn" onclick="go404()">
+        Explore More →
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- IMAGE SLIDER -->
+  <section class="slider">
+
+    <div class="slide-track">
+
+      <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c" />
+
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" />
+
+      <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" />
+
+      <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" />
+
+    </div>
+
+  </section>
+
+  <!-- EXTRA CONTENT -->
+  <section class="hero-extra">
+
+    <!-- MOVING TEXT -->
+    <div class="moving-content">
+
+      <p>
+        🚀 Cloud • AI • Cybersecurity • Automation • DevOps • Data Science
+      </p>
+
+    </div>
+
+    <!-- MOVING IMAGES -->
+    <div class="moving-image">
+
+      <img
+        src="https://images.unsplash.com/photo-1551434678-e076c223a692"
+        class="img1"
+      />
+
+      <img
+        src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"
+        class="img2"
+      />
+
+      <img
+        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+        class="side-img"
+      />
+
+    </div>
+
+  </section>
+
+  <!-- HOW WE WORK -->
+  <section class="work-section">
+
+    <div class="section-head">
+
+      <span>How We Work</span>
+
+      <h2>
+        Simple Process.<br />
+        Powerful Results.
+      </h2>
+
+    </div>
+
+    <div class="work-grid">
+
+      <!-- CARD 1 -->
+      <div class="work-item">
+
+        <div class="circle">01</div>
+
+        <h3>Research & Strategy</h3>
+
+        <p>
+          We analyze business requirements and build
+          scalable strategies that support sustainable
+          digital growth.
+        </p>
+
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="work-item">
+
+        <div class="circle">02</div>
+
+        <h3>Development & Execution</h3>
+
+        <p>
+          Our engineers create secure and modern digital
+          products optimized for performance and efficiency.
+        </p>
+
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="work-item">
+
+        <div class="circle">03</div>
+
+        <h3>Optimization & Support</h3>
+
+        <p>
+          We continuously monitor, optimize, and improve
+          systems to ensure long-term operational success.
+        </p>
+
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="work-item">
+
+        <div class="circle">04</div>
+
+        <h3>Digital Transformation</h3>
+
+        <p>
+          We modernize business operations with innovative
+          technologies, automation systems, and scalable
+          digital platforms tailored for future growth.
+        </p>
+
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="work-item">
+
+        <div class="circle">05</div>
+
+        <h3>24/7 Technical Support</h3>
+
+        <p>
+          Our dedicated support team continuously monitors
+          infrastructure, resolves issues quickly, and ensures
+          uninterrupted business performance at all times.
+        </p>
+
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="work-item">
+
+        <div class="circle">06</div>
+
+        <h3>Business Intelligence</h3>
+
+        <p>
+          We leverage advanced analytics and real-time insights
+          to help organizations make smarter decisions,
+          improve productivity, and accelerate business growth.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SERVICES INFO -->
+  <section class="services-info">
+
+    <p class="tag explore-animate">
+      Explore Services
     </p>
 
-    <button class="btn" onclick="go404()">Explore More →</button>
-  </div>
+    <h2 class="reveal-up">
+      Empowering Businesses Through <br />
+      Smart Digital Solutions
+    </h2>
 
-</section>
-  
+    <!-- ITEM 1 -->
+    <div class="info-box reveal-left">
 
-<!-- MOVING IMAGES -->
-<section class="slider">
-  <div class="slide-track">
-    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
-    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
-    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
-    <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
-  </div>
+      <div class="number">01</div>
 
-<div class="hero-extra">
+      <div class="info-content">
 
-  <!-- MOVING TEXT -->
-  <div class="moving-content">
-    <p>🚀 Cloud • AI • Cybersecurity • Automation • DevOps • Data Science</p>
-  </div>
+        <h3>Cloud Infrastructure Modernization</h3>
 
-  <!-- MOVING IMAGE -->
-  <div class="moving-image">
-    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692" alt="tech">
-      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" class="img2">
-   
-  <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" class="side-img">
-  </div>
+        <p>
+          We help organizations transition from legacy systems
+          to scalable cloud environments, improving flexibility,
+          security, and efficiency.
+        </p>
 
-</div>
-
-<section class="steps">
-
-  <p class="tag">How We Work</p>
-
-  <h2>
-    Driving Digital Growth Through <br> Smart Execution
-  </h2>
-
-  <!-- STEP 1 -->
-  <div class="step">
-    <div class="step-number">01</div>
-    <div class="step-card reveal">
-      <h3>Strategic Analysis & Consultation</h3>
-      <p>
-        We begin by understanding your business ecosystem, identifying key challenges,
-        and aligning technology solutions with your long-term objectives. Our goal is
-        to create a clear and actionable roadmap for success.
-      </p>
-    </div>
-  </div>
-
-  <!-- STEP 2 -->
-  <div class="step">
-    <div class="step-number">02</div>
-    <div class="step-card reveal">
-      <h3>Solution Design & Development</h3>
-      <p>
-        Our team architects and develops tailored solutions using modern technologies,
-        ensuring scalability, performance, and security at every stage of the process.
-      </p>
-    </div>
-  </div>
-
-  <!-- STEP 3 -->
-  <div class="step">
-    <div class="step-number">03</div>
-    <div class="step-card reveal">
-      <h3>Deployment & Continuous Optimization</h3>
-      <p>
-        We seamlessly deploy solutions and continuously monitor performance,
-        optimizing systems to ensure efficiency, reliability, and long-term growth.
-      </p>
-    </div>
-  </div>
-
-</section>
-
-<section class="services-info">
-<p class="tag explore-animate">Explore Services</p>
-
-  <h2 class="reveal-up">
-    Empowering Businesses Through <br> Smart Digital Solutions
-  </h2>
-
-  <!-- ITEM 1 -->
-  <div class="info-box reveal-left">
-    <div class="number">01</div>
-    <div class="info-content">
-      <h3>Cloud Infrastructure Modernization</h3>
-      <p>
-        We help organizations transition from legacy systems to scalable cloud
-        environments, enabling flexibility, improved performance, and reduced
-        operational costs. Our approach ensures minimal disruption and long-term efficiency.
-      </p>
-    </div>
-  </div>
-
-  <!-- ITEM 2 -->
-  <div class="info-box reveal-right">
-    <div class="number">02</div>
-    <div class="info-content">
-      <h3>Custom Application Development</h3>
-      <p>
-        Our team builds tailored digital solutions that align with your business
-        workflows. From web platforms to enterprise systems, we focus on usability,
-        performance, and future scalability.
-      </p>
-    </div>
-  </div>
-
-  <!-- ITEM 3 -->
-  <div class="info-box reveal-left">
-    <div class="number">03</div>
-    <div class="info-content">
-      <h3>Enterprise Process Optimization</h3>
-      <p>
-        We analyze and refine your operational processes using data-driven insights,
-        automation, and modern tools, helping you achieve higher productivity and
-        streamlined workflows.
-      </p>
-    </div>
-  </div>
-
-</section>
-
-
-
-
-
-
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-
-  <div class="footer-container">
-
-    <!-- LINKS -->
-    <div class="footer-col">
-      <h3>Company</h3>
-      <p>Privacy Policy</p>
-      <p>Recognitions</p>
-      <p>Careers <span class="new">NEW</span></p>
-      <p>News</p>
-      <p>Feedback</p>
-    </div>
-
-    <!-- SERVICES -->
-     <div class="footer-col">
-  <h3>Services</h3>
-
-  <a href="404.html">Manage IT Service</a>
-  <a href="404.html">Cloud Computing</a>
-  <a href="404.html">Cyber Security</a>
-  <a href="404.html">Software Develop</a>
-  <a href="404.html">IT Consulting</a>
-</div>
-
-    <!-- OFFICE -->
-    <div class="footer-col">
-      <h3>Office Hours</h3>
-      <p>Mon - Fri : 9AM - 6PM</p>
-      <p>Sat : 7AM - 9PM</p>
-      <p>Sunday <span class="close">Closed</span></p>
-    </div>
-
-    <!-- CONTACT -->
-    <div class="footer-col">
-      <h3>Contact</h3>
-      <p>info@stackly.com</p>
-      <p>+91 98765 43210</p>
-
-      <div class="social">
-        <i class="fab fa-facebook-f"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-x-twitter"></i>
-        <i class="fab fa-linkedin-in"></i>
       </div>
+
     </div>
 
-  </div>
+    <!-- ITEM 2 -->
+    <div class="info-box reveal-right">
 
-  <div class="footer-bottom">
-    <p>stackly © 2026. All right reserved.</p>
-    <p>Privacy & Policy • Terms & Condition</p>
-  </div>
+      <div class="number">02</div>
 
-</footer>
+      <div class="info-content">
 
-<script src="script.js"></script>
+        <h3>Custom Application Development</h3>
+
+        <p>
+          Our team develops modern and scalable applications
+          designed to streamline operations and improve
+          user experience.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- ITEM 3 -->
+    <div class="info-box reveal-left">
+
+      <div class="number">03</div>
+
+      <div class="info-content">
+
+        <h3>Enterprise Process Optimization</h3>
+
+        <p>
+          We streamline workflows using automation,
+          analytics, and advanced technologies that
+          drive long-term business growth.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PREMIUM SERVICES -->
+  <section class="premium-services">
+
+    <!-- HEADER -->
+    <div class="premium-header">
+
+      <p class="premium-tag">
+        Enterprise Solutions
+      </p>
+
+      <h2>
+        Smart Digital Services <br>
+        For Modern Businesses
+      </h2>
+
+    </div>
+
+    <!-- TABS -->
+    <div class="services-tabs">
+
+      <!-- CLOUD -->
+      <button
+        class="service-tab active"
+        onclick="changeService(
+          this,
+          'Enterprise Cloud Architecture',
+          'Secure cloud infrastructure solutions designed for scalability, flexibility, and operational efficiency.',
+          'https://images.unsplash.com/photo-1451187580459-43490279c0fa',
+          'fa-cloud'
+        )"
+      >
+        Cloud Computing
+      </button>
+
+      <!-- SOFTWARE -->
+      <button
+        class="service-tab"
+        onclick="changeService(
+          this,
+          'Modern Software Development',
+          'Custom enterprise applications built with modern technologies for performance and user experience.',
+          'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+          'fa-code'
+        )"
+      >
+        Software Development
+      </button>
+
+      <!-- CYBER -->
+      <button
+        class="service-tab"
+        onclick="changeService(
+          this,
+          'Advanced Cyber Security',
+          'Protect digital infrastructure with enterprise-grade cybersecurity systems and monitoring.',
+          'https://images.unsplash.com/photo-1550751827-4bd374c3f58b',
+          'fa-shield-halved'
+        )"
+      >
+        Cyber Security
+      </button>
+
+      <!-- DATA -->
+      <button
+        class="service-tab"
+        onclick="changeService(
+          this,
+          'Business Data Analytics',
+          'Transform enterprise data into valuable business insights using intelligent analytics systems.',
+          'https://images.unsplash.com/photo-1518186285589-2f7649de83e0',
+          'fa-chart-line'
+        )"
+      >
+        Data Analytics
+      </button>
+
+    </div>
+
+    <!-- DISPLAY -->
+    <div class="service-display">
+
+      <!-- LEFT -->
+      <div class="service-content">
+
+        <div class="service-icon">
+          <i id="serviceIcon" class="fas fa-cloud"></i>
+        </div>
+
+        <h3 id="serviceTitle">
+          Enterprise Cloud Architecture
+        </h3>
+
+        <p id="serviceDesc">
+          Secure cloud infrastructure solutions designed
+          for scalability, flexibility, and operational efficiency.
+        </p>
+
+        <button class="service-btn" onclick="go404()">
+          Explore Solution
+        </button>
+
+      </div>
+
+      <!-- RIGHT -->
+      <div class="service-image">
+
+        <img
+          id="serviceImage"
+          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa"
+        />
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <div class="footer-container">
+
+      <!-- COMPANY -->
+      <div class="footer-col">
+
+        <h3>Company</h3>
+
+        <p>Privacy Policy</p>
+
+        <p>Recognitions</p>
+
+        <p>
+          Careers <span class="new">NEW</span>
+        </p>
+
+        <p>News</p>
+
+        <p>Feedback</p>
+
+      </div>
+
+      <!-- SERVICES -->
+      <div class="footer-col">
+
+        <h3>Services</h3>
+
+        <a href="404.html">Manage IT Service</a>
+
+        <a href="404.html">Cloud Computing</a>
+
+        <a href="404.html">Cyber Security</a>
+
+        <a href="404.html">Software Development</a>
+
+        <a href="404.html">IT Consulting</a>
+
+      </div>
+
+      <!-- OFFICE -->
+      <div class="footer-col">
+
+        <h3>Office Hours</h3>
+
+        <p>Mon - Fri : 9AM - 6PM</p>
+
+        <p>Sat : 7AM - 9PM</p>
+
+        <p>
+          Sunday <span class="close">Closed</span>
+        </p>
+
+      </div>
+
+      <!-- CONTACT -->
+      <div class="footer-col">
+
+        <h3>Contact</h3>
+
+        <p>info@stackly.com</p>
+
+        <p>+91 98765 43210</p>
+
+        <div class="social">
+
+          <i class="fab fa-facebook-f"></i>
+
+          <i class="fab fa-instagram"></i>
+
+          <i class="fab fa-x-twitter"></i>
+
+          <i class="fab fa-linkedin-in"></i>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <p>Stackly © 2026. All rights reserved.</p>
+
+      <p>Privacy Policy • Terms & Conditions</p>
+
+    </div>
+
+  </footer>
+
+  <script src="script.js"></script>
+
 </body>
+
 </html>
