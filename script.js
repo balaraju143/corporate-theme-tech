@@ -9,9 +9,9 @@ window.onload = ()=>{
 
     setTimeout(()=>{
       loader.style.display = "none";
-    },400);
+    },200);
 
-  },2000);
+  },1000);
 
 };
 
@@ -260,7 +260,5 @@ function changeService(tab,title,desc,image){
   },200);
 
 }
-
-
 
 
