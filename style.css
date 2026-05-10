@@ -1,6 +1,4 @@
-/* ====================================
-   RESET
-==================================== */
+
 
 *{
   margin:0;
@@ -1425,6 +1423,415 @@ header{
       rgba(0,0,0,0.55),
       rgba(0,0,0,0.75)
     ) !important;
+  }
+
+}
+
+/* ===== TECH SCROLL ===== */
+
+.tech-scroll-section{
+  width:100%;
+
+  overflow:hidden;
+
+  padding:60px 0;
+
+  background:linear-gradient(to bottom,#081120,#050b15);
+}
+
+.tech-scroll-track{
+  display:flex;
+
+  gap:25px;
+
+  width:max-content;
+
+  animation:techScroll 30s linear infinite;
+}
+
+/* CARD */
+.tech-card{
+  min-width:220px;
+  height:180px;
+
+  background:#0f172a;
+
+  border:1px solid rgba(255,255,255,0.05);
+
+  border-radius:26px;
+
+  display:flex;
+  flex-direction:column;
+
+  align-items:center;
+  justify-content:center;
+
+  transition:0.4s ease;
+}
+
+/* ICON */
+.tech-card i{
+  font-size:52px;
+
+  color:#2d6cff;
+
+  margin-bottom:20px;
+}
+
+/* TEXT */
+.tech-card h3{
+  font-size:20px;
+
+  font-weight:700;
+}
+
+/* HOVER */
+.tech-card:hover{
+  transform:translateY(-10px);
+
+  background:#13203b;
+}
+
+/* ANIMATION */
+@keyframes techScroll{
+
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(-50%);
+  }
+
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .tech-card{
+    min-width:170px;
+    height:150px;
+  }
+
+  .tech-card i{
+    font-size:42px;
+  }
+
+  .tech-card h3{
+    font-size:17px;
+    text-align:center;
+  }
+
+}
+
+
+/* ===== LEADERSHIP SECTION ===== */
+/* ====================================
+   LEADERSHIP SECTION FINAL
+==================================== */
+
+.leadership-section{
+  padding:100px 5%;
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:
+  linear-gradient(
+    to bottom,
+    #020b18 0%,
+    #04101f 20%,
+    #06152a 45%,
+    #081935 70%,
+    #0a1c3d 100%
+  );
+}
+
+/* ====================================
+   BLUE GLOW EFFECTS
+==================================== */
+
+.leadership-section::before{
+  content:"";
+
+  position:absolute;
+
+  width:500px;
+  height:500px;
+
+  background:rgba(35,110,255,0.12);
+
+  filter:blur(140px);
+
+  top:-180px;
+  left:-180px;
+
+  border-radius:50%;
+}
+
+.leadership-section::after{
+  content:"";
+
+  position:absolute;
+
+  width:400px;
+  height:400px;
+
+  background:rgba(0,90,255,0.10);
+
+  filter:blur(140px);
+
+  bottom:-140px;
+  right:-140px;
+
+  border-radius:50%;
+}
+
+/* CONTENT ABOVE */
+.leadership-heading,
+.leadership-grid{
+  position:relative;
+  z-index:2;
+}
+
+/* ====================================
+   HEADING
+==================================== */
+
+.leadership-heading{
+  text-align:center;
+
+  margin-bottom:70px;
+}
+
+.leadership-heading p{
+  color:#4f8cff;
+
+  font-size:15px;
+
+  letter-spacing:5px;
+
+  text-transform:uppercase;
+
+  margin-bottom:18px;
+
+  font-weight:600;
+}
+
+.leadership-heading h2{
+  font-size:68px;
+
+  line-height:1.1;
+
+  font-weight:800;
+
+  color:#fff;
+}
+
+/* ====================================
+   GRID
+==================================== */
+
+.leadership-grid{
+  display:grid;
+
+  grid-template-columns:repeat(4,1fr);
+
+  gap:30px;
+}
+
+/* ====================================
+   CARD
+==================================== */
+
+.leader-card{
+  position:relative;
+
+  background:rgba(255,255,255,0.04);
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  border-radius:32px;
+
+  overflow:hidden;
+
+  transition:0.5s ease;
+
+  backdrop-filter:blur(14px);
+
+  box-shadow:
+  0 10px 40px rgba(0,0,0,0.25);
+}
+
+.leader-card:hover{
+  transform:translateY(-14px);
+
+  border-color:rgba(79,140,255,0.45);
+
+  box-shadow:
+  0 25px 60px rgba(0,102,255,0.25);
+}
+
+/* ====================================
+   IMAGE
+==================================== */
+
+.leader-img{
+  position:relative;
+
+  height:420px;
+
+  overflow:hidden;
+}
+
+.leader-img::after{
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+  linear-gradient(
+    to top,
+    rgba(10,10,20,0.45),
+    transparent
+  );
+}
+
+.leader-img img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transition:0.6s ease;
+}
+
+.leader-card:hover img{
+  transform:scale(1.08);
+}
+
+/* ====================================
+   CONTENT
+==================================== */
+
+.leader-content{
+  padding:32px 28px;
+
+  text-align:center;
+}
+
+.leader-content h3{
+  font-size:30px;
+
+  color:#fff;
+
+  margin-bottom:12px;
+
+  font-weight:700;
+}
+
+.leader-content span{
+  display:block;
+
+  color:#4f8cff;
+
+  font-size:13px;
+
+  letter-spacing:4px;
+
+  text-transform:uppercase;
+
+  font-weight:600;
+}
+
+/* ====================================
+   SOCIAL
+==================================== */
+
+.leader-social{
+  display:flex;
+
+  justify-content:center;
+
+  gap:16px;
+
+  margin-top:28px;
+}
+
+.leader-social i{
+  width:46px;
+  height:46px;
+
+  border-radius:50%;
+
+  background:rgba(79,140,255,0.12);
+
+  color:#4f8cff;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  cursor:pointer;
+
+  transition:0.35s ease;
+
+  font-size:16px;
+}
+
+.leader-social i:hover{
+  background:lawngreen;
+
+  color:#fff;
+
+  transform:translateY(-5px) scale(1.08);
+}
+
+/* ====================================
+   TABLET
+==================================== */
+
+@media(max-width:1100px){
+
+  .leadership-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+/* ====================================
+   MOBILE
+==================================== */
+
+@media(max-width:768px){
+
+  .leadership-section{
+    padding:80px 20px;
+  }
+
+  .leadership-heading{
+    margin-bottom:50px;
+  }
+
+  .leadership-heading h2{
+    font-size:42px;
+  }
+
+  .leadership-grid{
+    grid-template-columns:1fr;
+
+    gap:25px;
+  }
+
+  .leader-img{
+    height:360px;
+  }
+
+  .leader-content h3{
+    font-size:26px;
   }
 
 }
